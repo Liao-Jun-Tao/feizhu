@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive,onMounted } from 'vue'
 const state = reactive({
     sug:[{id:1,sug:'南昌的景点'},
          {id:2,sug:'南昌美食'},
@@ -20,6 +20,7 @@ const state = reactive({
          {id:4,sug:'南昌旅游攻略'},
          {id:5,sug:'南昌交通指南'},]
 })
+
 
 </script>
 <style scoped>

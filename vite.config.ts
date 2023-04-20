@@ -7,10 +7,10 @@ import { resolve } from 'path';
 export default defineConfig({
     plugins: [vue(), WindiCSS()],
     resolve: {
-    alias: {
-    '@': resolve(__dirname, 'src')
-    }
-},
+        alias: {
+            "@": resolve(__dirname, "src")
+        }
+    },
 // server: {
 //     proxy: {
 //       '/api': {
