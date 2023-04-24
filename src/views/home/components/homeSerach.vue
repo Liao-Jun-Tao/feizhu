@@ -1,4 +1,5 @@
 <template>
+    <!-- 搜索栏 -->
     <div class="w-screen h-8 bg-img flex items-end justify-center">
         <div
             class="bg-light-50 w-36 h-5 rounded-xl  border-2 border-solid border-yellow-300 flex justify-between items-center ">
@@ -14,6 +15,7 @@
 <script setup lang="ts">
 import { reactive,onMounted } from 'vue'
 const state = reactive({
+    // 搜索建议
     sug:[{id:1,sug:'南昌的景点'},
          {id:2,sug:'南昌美食'},
          {id:3,sug:'南昌住宿'},
@@ -25,6 +27,7 @@ const state = reactive({
 </script>
 <style scoped>
 .bg-img {
+    /* 背景图片 */
     background: url('@/assets/images/1681741391.webp');
     background-position: 50% -45%;
     background-size: cover;
