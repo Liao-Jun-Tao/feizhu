@@ -1,6 +1,8 @@
 <template>
+    <!-- 票务信息 -->
     <div class="bg-red-500 border-red-600 border   rounded w-36 h-19 xcenter mt-1 font">
     <div class="bg-light-50 border-red-600 border   rounded ">
+        <!-- 始发地和目的地 -->
         <div class="font-bold flex justify-around items-center h-5 fontsize">
             <div>北京市</div>
             <div class="iconfont icon-zhuanhuan "></div>
@@ -8,16 +10,20 @@
         </div>
         <!-- 分割线 -->
         <div class="w-26 h-0.1 bg-gray-200 xcenter"></div>
+        <!-- 日期和提示 -->
         <div class="h-5 flex items-center ">
             <span class="fontsize-1 font-bold ml-3">05月03日</span>
             <div class="bg-red-100 text-red-800 ml-2 w-14 text-center rounded-lg">今日开售5月4日火车票</div>
         </div>
+        <!-- 分割线 -->
         <div class="w-26 h-0.1 bg-gray-200 xcenter"></div>  
+        <!-- 搜索按钮 -->
         <div class="flex items-center justify-around  h-5">
             <div class="bg-yellow-300 bor h-3 w-12 rounded-lg  flex items-center justify-center font-bold ">搜索机票</div>
             <div  class="bg-yellow-300 h-3 w-12  rounded-lg flex items-center justify-center font-bold">搜火车票</div>
         </div>
     </div>
+    <!-- 其他信息 -->
     <div class="text-light-50 flex justify-between">
     <div>
         <span class="iconfont icon-naozhong text-yellow-200 ml-1"></span>

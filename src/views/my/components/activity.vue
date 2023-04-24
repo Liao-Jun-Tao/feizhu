@@ -1,4 +1,5 @@
 <template>
+    <!-- 活动栏目 -->
     <div class="w-38 h-10 center rounded bg-white mt-1 font-serif flex justify-around items-center" >
         <div >
             <img class="w-6 h-6" src="https://i.328888.xyz/2023/04/22/i58Hlo.png" alt="">
@@ -24,10 +25,11 @@
 </script>
 
 <style scoped>
-.center{
-    position: relative;
-    left: 50%;
-    translate:-50%;
-}
+    /* 水平居中 */
+    .center{
+        position: relative;
+        left: 50%;
+        translate:-50%;
+    }
 
 </style>

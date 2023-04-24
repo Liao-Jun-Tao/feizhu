@@ -23,6 +23,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'strategy',
     component: () => import('../views/strategy/strategy.vue')
   },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import('../views/search/search.vue')
+  },
+ 
  
   
  

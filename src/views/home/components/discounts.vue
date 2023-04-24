@@ -1,4 +1,5 @@
 <template>
+    <!-- 天天特惠模块 -->
     <div class="rounded w-36 h-12 xcenter mt-1 font flex justify-between">
        <div class="w-17.5 h-12 bg-red-50 rounded">
             <div class="h-3  flex items-center justify-around">
@@ -19,6 +20,7 @@
             
        </div>
 
+       <!-- 特价机票模块 -->
        <div class="w-17.5 h-12 bg-red-50 rounded">
             <div class="h-3  flex items-center ">
                 <img class="w-1.5 h-1.5 ml-0.5" src="https://i.328888.xyz/2023/04/23/i51G2p.png" >
