@@ -28,10 +28,6 @@ const routes: Array<RouteRecordRaw> = [
     name: 'search',
     component: () => import('../views/search/search.vue')
   },
- 
- 
-  
- 
 ]
 const router = createRouter({
   history: createWebHistory(),
