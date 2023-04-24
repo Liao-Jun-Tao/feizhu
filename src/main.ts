@@ -8,6 +8,6 @@ import '@/mock/index';  // 引入库
 import 'lib-flexible/flexible'; //移动端适配
 const app = createApp(App);
 app
-.use(createPinia())
-.use(router).
-mount('#app');
+    .use(createPinia())
+    .use(router).
+    mount('#app');
