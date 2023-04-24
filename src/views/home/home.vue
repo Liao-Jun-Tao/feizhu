@@ -1,13 +1,12 @@
 <template>
-    <header>
+   <div class="h-full scrollbar-hidden" style="overflow: auto; ">
         <search/>
-    </header>
-    <section class="bg-img-s ">
         <suggestion />
-        
-     </section>
         <ticket/>
-     <navbar/>
+        <discounts/>
+        <navbar/>
+        <Hot />
+     </div>
 </template>
 
 <script setup lang="ts">
@@ -15,14 +14,13 @@ import search from './components/homeSerach.vue'
 import suggestion from './components/SearchSuggestion.vue'
 import ticket from './components/ticket.vue'
 import navbar from '../../components/navbar.vue'
+import discounts from './components/discounts.vue'
+import Hot from './components/Hot.vue'
 </script>
 
 <style scoped>
-
-.bg-img-s {
-  background-image: url("@/assets/images/1681741392.webp");
-  background-position: 0 0;
-  background-size: contain;
-  background-repeat: no-repeat;
+::-webkit-scrollbar {
+  display: none;
 }
+
 </style>
