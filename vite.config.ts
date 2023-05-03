@@ -11,15 +11,19 @@ export default defineConfig({
             "@": resolve(__dirname, "src")
         }
     },
-// server: {
-//     proxy: {
-//       '/api': {
-//         target: 'http://localhost:3000',
-//         changeOrigin: true,
-//         rewrite: (path) => path.replace(/^\/api/, '')
-//       }
-//     },
-//     // 可选地，如果你需要自签名证书：
-//     // https: true,
-//   }
+    // 设置服务器端口号和代理
+    server: {
+        // 设置端口号为8000
+        port: 8000,
+        proxy: {
+            '/api': {
+                // 将请求代理到本地的3000端口
+                target: 'http://localhost:3000',
+                // 改变源
+                changeOrigin: true,
+                // 重写路径
+                rewrite: (path) => path.replace(/^\/api/, ''),
+            },
+        },
+    },
 });
