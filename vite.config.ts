@@ -12,7 +12,6 @@ export default defineConfig({
         }
     },
     // 设置服务器端口号和代理
-    // 设置服务器端口号和代理
     server: {
         // 设置端口号为8000
         port: 8000,
@@ -27,5 +26,4 @@ export default defineConfig({
             },
         },
     },
-
 });
