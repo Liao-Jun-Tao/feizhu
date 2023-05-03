@@ -1,12 +1,26 @@
 <template>
     <!-- 搜索框 -->
     <div class="h-7 flex items-center font">
-        <span class="icon-xiangzuojiantou iconfont ml-1 text-black mr-1"></span>
+
+        <span class="icon-xiangzuojiantou iconfont ml-1 text-black mr-1">
+        </span>
+
         <div class="flex-1 border-2 border-yellow-400 rounded-lg h-4 flex items-center">
+
             <span class="icon-sousuo iconfont mx-1"></span>
-            <input class="h-3.5 w-20 none text-0.4rem" type="text" placeholder="66元赢机票">
+
+            <input 
+            class="h-3.5 w-20 none text-0.4rem" 
+            type="text" 
+            placeholder="66元赢机票">
+
         </div>
-        <div class="w-6 bg-yellow-400 h-4 rounded-lg mx-1 text-center leading-4 font-bold  text-0.4rem">搜索</div>
+
+        <div 
+        class="w-6 bg-yellow-400 h-4 rounded-lg mx-1 text-center leading-4 font-bold  text-0.4rem">
+            搜索
+        </div>
+        
     </div>
     
     <!-- 搜索历史 -->
