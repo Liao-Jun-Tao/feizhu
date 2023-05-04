@@ -1,4 +1,3 @@
-
 const app = require('./app/app')
 
 const { APP_PORT } = require('./app/app.config')

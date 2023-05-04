@@ -17,6 +17,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed,onMounted } from 'vue'
 // 引入组件
 import search from './components/homeSerach.vue'
 import suggestion from './components/SearchSuggestion.vue'
@@ -24,6 +25,17 @@ import ticket from './components/ticket.vue'
 import navbar from '../../components/navbar.vue'
 import discounts from './components/discounts.vue'
 import Hot from './components/Hot.vue'
+import { useHomeStore } from '../../store/home'
+
+const homeStore = useHomeStore(); // 本地到中央的联系
+const sidebar = computed(()=>homeStore.sidebar)
+
+onMounted(async () => {
+  await homeStore.getSideBar()
+  console.log(sidebar.value)
+})
+
+
 </script>
 
 <style scoped>

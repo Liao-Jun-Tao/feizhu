@@ -39,7 +39,6 @@ class UserService {
         password && Object.assign(newUser, { password })
 
         const res = await User.update(newUser, { where: whereOpt })
-        // console.log(res)
         return res[0] > 0 ? true : false
     }
 

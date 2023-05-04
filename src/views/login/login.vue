@@ -68,8 +68,7 @@ const changevisible = () => {
 
 <style scoped>
 .font-f {
-    font-family: '楷体';
-    ;
+    font-family: '楷体';   
 }
 
 .center-x {

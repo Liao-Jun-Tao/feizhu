@@ -1,18 +1,16 @@
 import { defineStore } from "pinia";
-import { getSideBar } from "../service/home";
-
+import { homeApi } from '../service/index'
 
 export const useHomeStore = defineStore("home", {
     state: () => {
       return {
-        sidebar:[]
+        sidebar:{ }
       }
     },
     actions: {
       async getSideBar() {
-        const response = await getSideBar();
-        console.log(response.data);
-        this.sidebar = response.data;
-      },
+        const [e, r] = await homeApi.getSideBar();
+        if (!e && r) this.sidebar = r
+      }
     },
-  });
+});

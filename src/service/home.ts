@@ -1,5 +1,5 @@
-import axios from './config'
+// import axios from './config'
 
-export const getSideBar =()=>{  
-    return axios.get('/sidebar') 
-}
+// export const getSideBar =()=>{  
+//     return axios.get('/sidebar') 
+// }
