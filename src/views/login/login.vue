@@ -1,83 +1,91 @@
-
 <template>
-    <div class="font-f  ">
+  <div class="font-f">
+    <header class="mt-2 font-bold text-0.37rem flex justify-between">
+      <span class="icon-xiangzuojiantou iconfont ml-1 flex-1"></span>
+      <span class="mr-3">隐私</span>
+      <span class="mr-2">遇到问题 ?</span>
+    </header>
 
-        <header class="mt-2 font-bold text-0.37rem flex justify-between ">
-            <span class="icon-xiangzuojiantou iconfont ml-1 flex-1"></span>
-            <span class="mr-3">隐私</span>
-            <span class="mr-2">遇到问题 ?</span>
-        </header>
+    <!-- logo -->
+    <img class="w-10 h-10 center-x mt-4" src="https://i.328888.xyz/2023/04/23/i5gr6d.png" />
 
-        <!-- logo -->
-        <img class="w-10 h-10 center-x  mt-4" src="https://i.328888.xyz/2023/04/23/i5gr6d.png">
-        <!-- 登录表单 -->
-        <form class="">
+    <!-- 登录表单 -->
+    <van-form @submit="onSubmit" >
+  <van-cell-group inset>
+    <van-field
+      v-model="state.name"
+      name="name"
+      label="用户名"
+      placeholder="用户名"
+      autocomplete="current-password"
+      :rules="[{ required: true, message: '用户名不能为空' }]"
+    />
+    <van-field
+      v-model="state.password"
+      type="password"
+      name="password"
+      label="密码"
+      placeholder="密码"
+      :rules="[{ required: true, message: '密码不能为空' }]"
+    />
+  </van-cell-group>
+  <div style="margin: 16px;">
+    <van-button round block type="primary" native-type="submit">
+      登录
+    </van-button>
+  </div>
+</van-form>
 
-            <div class="w-34  h-4.5 center-x border-b-1 text-0.48rem">
-                <input class="w-30  h-4 ml-32px none " type="text" placeholder="请输入账号" v-model="state.name">
-            </div>
-
-            <div class="w-34  h-4.5 center-x border-b-1 flex items-center text-0.48rem">
-                <span class="icon-yanjing_bi iconfont" v-if='!state.visibleType' @click="changevisible"></span>
-
-                <span class="icon-yanjing iconfont" @click="changevisible" v-else></span>
-
-                <input class="flex-1  h-4 ml-16px none" :type="state.passwordType" placeholder="请输入密码"
-                    v-model="state.password">
-
-                <span>忘记密码</span>
-            </div>
-
-            <div class="mt-3">登录查看更多权益</div>
-            <button class="w-34 h-4 bg-yellow-300 rounded-lg center-x text-0.48rem ">登录</button>
-            <button class="w-34 h-4  rounded-lg center-x text-0.48rem">注册</button>
-
-        </form>
-
-        <footer>
-            <div>其他方式</div>
-            <div>
-                <span>淘宝</span>
-                <span>支付宝</span>
-                <span>验证码</span>
-            </div>
-        </footer>
-
-    </div>
+    <footer>
+      <div>其他方式</div>
+      <div>
+        <span>淘宝</span>
+        <span>支付宝</span>
+        <span>验证码</span>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
-const state = reactive({
-    visibleType: false,
-    passwordType: 'password',
-    name: '',
-    password: ''
-})
+import { reactive } from "vue";
+import axios from 'axios';
 
-const changevisible = () => {
-    state.visibleType = !state.visibleType
-    if (state.visibleType) {
-        state.passwordType = 'text'
-    } else {
-        state.passwordType = 'password'
-    }
-}
+const state = reactive({
+  name: "",
+  password: "",
+});
+
+const onSubmit = async (values: any) => {
+  try {
+    const response = await axios.post('api/users/login', values);
+    console.log(response.data);
+    console.log(response.data.result.token);
+    localStorage.setItem('token', response.data.result.token); 
+  } catch (err: any) {
+    console.log(err.response.data);
+  }
+};
+
+
+
 
 </script>
 
 <style scoped>
 .font-f {
-    font-family: '楷体';   
+  font-family: "楷体";
 }
 
 .center-x {
-    position: relative;
-    left: 50%;
-    translate: -50%;
+  position: relative;
+  left: 50%;
+  translate: -50%;
 }
 
 .none {
-    outline: none;
+  outline: none;
 }
 </style>
+
+
